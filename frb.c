@@ -15,7 +15,7 @@ unsigned int L;
 struct AStruct
 {
 	char errorViewString[52];
-	char dataInsertInstructionViewString[60];
+	char dataInsertInstructionViewString[80];
 	char dataUpdatedViewString[32];
 	char searchViewString[32];
 	char catalogViewString[32];
@@ -56,17 +56,28 @@ void read()
 	{
 		printf("struct write error\n");
 	}
-	printf("%s\n", SStruct.errorViewString);
-	printf("%s\n", SStruct.dataInsertInstructionViewString);
-	printf("%s\n", SStruct.dataUpdatedViewString);
-	printf("%s\n", SStruct.searchViewString);
-	printf("%s\n", SStruct.catalogViewString);
-	printf("%s\n", SStruct.backViewString);
-	printf("%s\n", SStruct.selectLanguageViewString);
-	printf("%s\n", SStruct.functionDataInsertString);
-	printf("%s\n", SStruct.functionSearchString);
-	printf("%s\n", SStruct.functionCatalogString);
-	printf("%s\n", SStruct.functionSelectLanguageString);
+	printf(SStruct.errorViewString);
+	putchar('\n');
+	printf(SStruct.dataInsertInstructionViewString, '\n', '\n', '\n');
+	putchar('\n');
+	printf(SStruct.dataUpdatedViewString, '\0');
+	putchar('\n');
+	printf(SStruct.searchViewString);
+	putchar('\n');
+	printf(SStruct.catalogViewString);
+	putchar('\n');
+	printf(SStruct.backViewString);
+	putchar('\n');
+	printf(SStruct.selectLanguageViewString, '\t', '\n', '\t', '\n', '\t');
+	putchar('\n');
+	printf(SStruct.functionDataInsertString, '\t');
+	putchar('\n');
+	printf(SStruct.functionSearchString, '\t');
+	putchar('\n');
+	printf(SStruct.functionCatalogString, '\t');
+	putchar('\n');
+	printf(SStruct.functionSelectLanguageString, '\t');
+	putchar('\n');
 	fclose(fp);
 }
 
